@@ -1,0 +1,13 @@
+p {
+    color: red;
+    text-align: left;
+}
+
+h3 {
+    text-align: left;
+    color: green
+}
+
+.text-success {
+    color: pink
+}

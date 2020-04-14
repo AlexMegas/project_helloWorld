@@ -1,0 +1,43 @@
+<p>Wellcome {{name.toLowerCase()}}</p>
+<h2>{{2+2}}</h2>
+<h2>{{"Wellcome " + name}}</h2>
+<h2>{{name.length}}</h2>
+<h2>{{name.toUpperCase()}}</h2>
+<h2>{{greetUser().toUpperCase()}}</h2>
+<h3>{{siteUrl}}</h3>
+<h1 class="text-success">VillagE</h1>
+<h1 [class]="successClass">VillagE</h1>
+
+<h1 class="text-special" [class]="successClass">VillagE</h1>
+<h1 [class.text-danger]="hasError">VillagE</h1>
+<h1 [ngClass]="messageClasses">Village Lap</h1>
+
+
+<h4 [style.color]="'orange'">Style Binding</h4>
+<h4 [style.color]="hasError ? 'red': 'green'">Style Binding</h4>
+<h4 [style.color]="highlightColor">Style Binding2</h4>
+<h4 [ngStyle]="titleStyles">Style Binding3</h4>
+
+<button (click)="onClick($event)">Greet</button>
+<button (click)="greeting='wilkomen Oleks'">Hallo</button>
+<br>
+{{greeting}}
+<br><br>
+
+<input [id]="myId" type="text" value="Alex">
+<br>
+<input [disabled]="isDisabled" id="{{myId}}" type="text" value="Alex123">
+<input bind-disabled="isDisabled" id="{{myId}}" type="text" value="Alex123">
+
+<div *ngFor="let color of colors; even as i">
+  <h2>{{i}} {{color}}</h2>
+</div>
+
+
+
+
+<h2 *ngIf="displayName; else elseBlock">Print some text to web-page</h2>
+
+<ng-template #elseBlock>
+  <h2>Name is hidden</h2>
+</ng-template>
